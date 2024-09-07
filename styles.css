@@ -4,22 +4,6 @@
     box-sizing: border-box;
 }
 
-header{
-    text-align: center;
-    margin-top: 100px;
-}
-
-/* 
-    CSS text shadow generated
-    URL: https://html-css-js.com/css/generator/text-shadow/
- */
-header h1{
-    color: #333;
-    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
-    font-size: 3rem;
-}
-
-
 body{
     margin: 0;
     font-size: 16px;
@@ -28,7 +12,7 @@ body{
 
     /* 
         Code from Google Font
-       Link: https://fonts.google.com/selection/embed
+        Link: https://fonts.google.com/selection/embed
     */
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
@@ -36,44 +20,36 @@ body{
     font-style: normal;
 }
 
-
-.container {
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 10px;
-    flex-wrap: wrap;
+header{
+    text-align: center;
+    margin-top: 100px;
 }
 
-.card{
-    width: 100%;
-    /* background-color: aqua; */
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* 
+    Generated CSS text shadow 
+    URL: https://html-css-js.com/css/generator/text-shadow/
+ */
+header h1{
+    color: #333;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+    font-size: 3rem;
 }
 
-.card img{
-    width: 90%;
+/* Chess logo */
+#logo-img{
+    width: 200px;
+    height: auto;
 }
 
-.card p{
-    margin: 0;
-    padding: 25px;
-    font-size: 1.2rem;
-    text-align: left;
-    text-indent: 30px;
-}
-
+/* Horizontal nav bar for desktop display */
 #horizontal-nav-bar{
+    /* Sticks to top of page */
     position: fixed;
-    top: 0; /* The element will stick to the top of the page */
+    top: 0; 
     width: 100%;
 }
 
-/* styling nav bar */
+/* Styling nav bar */
 #horizontal-nav-bar ul{
     background-color: #734747;
     display: flex;
@@ -85,25 +61,20 @@ body{
 }
 
 #horizontal-nav-bar ul li a{
-    /* get rid of link apperance */
+    /* Get rid of link apperance */
     text-decoration: none;
 
     color: #fff;
     font-size: 1.2rem;
 
     display: block; 
-    padding: 16px 20px; /* Increase padding to make the nav bar taller */
+    /* Make nav bar taller */
+    padding: 16px 20px; 
     margin: 0;
 }
 
-/* nav bar hover effect */
-#horizontal-nav-bar ul li a:hover{
-    background-color: antiquewhite;
-    border: 1px solid black;
-    color: #333;    
-}
 
-
+/* Side bar for tablet and mobile display */
 #tablet-side-bar, #mobile-side-bar{
     position: fixed;
     top: 0;
@@ -114,54 +85,99 @@ body{
 
     display: flex;
     flex-direction: column;
+}
+
+/* For sliding animation on mobile display*/
+#mobile-side-bar{
     transition: transform 0.3s ease-in-out;
 }
 
-/* Navigation menu styles */
-#tablet-side-bar nav, #mobile-side-bar nav{
-    flex: 1; /* Allows the nav to take up available space */
-    display: flex;
-    flex-direction: column; /* Stack nav items vertically */
-    justify-content: center; /* Center the ul vertically */
-  }
-
+/* Styling side bar */
 #tablet-side-bar nav ul, #mobile-side-bar nav ul{
 
     list-style: none;
     margin-top: 30vh;
     padding: 0;
 
-    /* background-color: rgba(255, 255, 255, 0.272); */
     text-align: center;
     font-weight: bold;
     width: 100%;
 }
 
+/* Space between items */
 #tablet-side-bar nav ul li, #mobile-side-bar nav ul li{
-    margin-bottom: 30px; /* Space between items */
+    margin-bottom: 30px;
 }
   
 
 #tablet-side-bar nav ul li a, #mobile-side-bar nav ul li a{
     display: block;
+    margin: 0;
+    padding: 16px 0px;
     text-decoration: none;
     color: #fff;
     font-size: 0.9rem;
-    margin: 0;
-    padding: 16px 0px;
 }
 
-#tablet-side-bar nav ul li a:hover, #mobile-side-bar nav ul li a:hover{
+/* All nav bar shares the same hover effect */
+#tablet-side-bar nav ul li a:hover, #mobile-side-bar nav ul li a:hover, #horizontal-nav-bar ul li a:hover{
     background-color: antiquewhite;
     color: #333;  
     border: 1px solid black;
 } 
 
+/* Styling buttons that shows/hides the mobile side bar */
+#hamburger-menu-button, #hide-sidebar-button{
+    /* sticks to location */
+    position: fixed;
+    top: 0;
+    border: none;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 10px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
 
+/* Style applied to mobile sidebar that makes it slide into view */
+.show-side-bar{
+    transform: translateX(0);
+}
+/* Style applied to mobile sidebar that makes it slide out of view */
+.hide-side-bar{
+    transform: translateX(-100%);
+}
 
-#logo-img{
-    width: 200px;
-    height: auto;
+/* The flexbox that contains "card" */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+/* Flex item of "containter" but flex box to its children */
+.card{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* flex item of card */
+.card img{
+    width: 90%;
+}
+
+/* flex item of card */
+.card p{
+    margin: 0;
+    padding: 25px;
+    font-size: 1.2rem;
+    text-align: left;
+    text-indent: 30px;
 }
 
 h2{
@@ -195,112 +211,115 @@ footer{
 }
 
 
-#hamburger-menu-button, #hide-sidebar-button{
-    border: none;
-    border-radius: 10px;
-    padding: 0 10px;
-    margin: 10px;
-    font-size: 40px;
-    cursor: pointer;
-    position: fixed;
-    top: 0;
-}
+/* 
+    Things that challenged me in this assignment:
+    * Media queries are still relatively new to me, so having to come up with three different layout
+      for each breakout was difficult.
+    * It was interesting creating the nav bar from flexboxes rather than float left. I decided 
+      to display a vertical side bar for the tablet breakpont, which is new to me. I've always 
+      made horizontal ones. 
+    * The last things was the collapsible side bar for the mobile layout. I drew inspiration from 
+      this week's video hamburger menu tutorial. The video created it stricly used HTML and CSS. I 
+      applied my JavaScript knowledge along with HTML and CSS to create an interactive sidebar for 
+      mobile users. 
+*/
 
-.show-side-bar{
-    transform: translateX(0);
-}
-
-.hide-side-bar{
-    transform: translateX(-100%);
-}
-
-/* Mobile layout  (up to 600px) */
+/* Mobile layout (up to 600px) */
 @media (max-width: 600px) {
-    /* Mobile-specific styles */
     
-    #about-para{
-        font-size: 1.2rem;
-    }
-
+    /* 
+        Each chess opening card takes up nearly the entire page,
+        causing them to stack up top of another. The content is now 
+        displayed in a single column. 
+    */
     .card{
-        flex: 0 1 100%; /* Full width for small screens */
+        flex: 0 1 90%; 
     }
 
-    /* hide horizontal nav bar */
-    #horizontal-nav-bar {
+    /* There is no longer a active nav bar, it is now collapsed and accessed through a button*/
+
+    /* Hides desktop and tablets side bar */
+    #horizontal-nav-bar, #tablet-side-bar {
         display: none;
     }
 
-    #tablet-side-bar{
-        display: none;
+    header h1 {
+        /* 3rem -> 1.5rem */
+        font-size: 1.5rem;
     }
 
+    /* Chess peice logo image */
     #logo-img{
+        /* 200px -> 100px */
         width: 100px;
         height: auto;
     }
 
     #about-para{
-        font-size: 1rem;
+        /* 1.5rem -> 1.2rem */
+        font-size: 1.2rem;
     }
-
-
 }
 
 /* Tablet layout from 600px up to 900px */
 @media (min-width: 600px) and (max-width: 900px) {
-    /* Tablet-specific styles */
 
+    /* Shift the main content to the right to fit the sidebar on the left side */
     main, header{
         position: relative;
         left: 15%;
         width: 85%;
     }
-    /* hide horizontal nav bar */
+
+    /* Show the tablet vertical side bar to the left of the main content */
+    #tablet-side-bar{
+        display: block;
+    }
+
+    /* Hide the horizontal desktop nav bar */
     #horizontal-nav-bar {
         display: none;
     }
     
 
-    /* set card initial size to 48%, creating a two column layout */
+    /* 
+        Each chess opening card takes up roughly 50% of the total width, 
+        allowing to fit 2 cards per row. This creates a two column layout.
+    */
     .card{
         flex: 0 1 48%;
     }
 
+    /* "Chess Opening Central" */
+    header h1{
+        font-size: 2.5rem;
+    }
+
+    /* logo picture */
     #logo-img{
+        /* 200px -> 150px */
         width: 150px;
         height: auto;
     }
 
     #about-para{
+        /* 1.5rem -> 1.2rem */
         font-size: 1.2rem;
     }
-
-    #hamburger-menu-button {
-        display: none;
-    }
-    
-    #mobile-side-bar{
-        display: none;
-    }
-    /* show vertical side bar */
-    #tablet-side-bar{
-        display: block;
-    }
-
-
 }
 
 /* Desktop layout (900px and above ) */
 @media (min-width: 900px) {
-
-
-    /* set card initial size to 30%, creating a three column layout */
+    /* 
+        Each chess opening card takes up roughly 30% of the total width, 
+        allowing to fit 3 cards per row. This creates a three column layout.
+        There is an active horizontal nav bar.
+    */
     .card{
         flex: 0 1 30%;
     }
 
-    /* hide vertical side bar */
+    /* hide tablet vertical side bar */
     #tablet-side-bar{
         display: none;
     }
