@@ -212,16 +212,43 @@ footer{
 
 
 /* 
-    Things that challenged me in this assignment:
+    Things that challenged me on this assignment:
     * Media queries are still relatively new to me, so having to come up with three different layout
       for each breakout was difficult.
-    * It was interesting creating the nav bar from flexboxes rather than float left. I decided 
-      to display a vertical side bar for the tablet breakpont, which is new to me. I've always 
-      made horizontal ones. 
+
+    * Typically, I make horizontal nav bar using the "float" css property. After watching this weeks 
+      video on flexboxes (https://www.youtube.com/watch?v=u044iM9xsWU), I applied what I learn to 
+      create a horizontal nav bar using out of flex boxes instead. It felt simplier and made more sense
+      creating using flex. Before, it was a pain trying to evenly distribute the spaces to each element
+      in the nav bar. The "justify-content" flex property makes it easy to do so. 
+      
+    * Creating the vertical nav bar out of flex box was much more challenging. Because, the 'flex-direction' 
+      is now in a column rather than in a row, the major axis are flip. Trying to distribute the space
+      evenly within a vertically layout proven to be a challenge. 'Justify-content' and 'align-item' was
+      not behaving as I wanted it to. It was a series of "plugging and chugging" until was roughly half way
+      in between the vertical nav bar. 
+
+      I used this as inspiration and build upon it: 
+      https://www.geeksforgeeks.org/how-to-create-a-navigation-bar-with-css-flexbox/#
+
+      I read this documentation to familarize myself with the "position" css property. That allowed me 
+      to have the nav bars stick in place as the content is being scrolled down. This also allowed to 
+      make the vertical bar to stick to the left hand side relative to the main content of the page.
+      https://www.w3schools.com/cssref/pr_class_position.php
+
     * The last things was the collapsible side bar for the mobile layout. I drew inspiration from 
-      this week's video hamburger menu tutorial. The video created it stricly used HTML and CSS. I 
-      applied my JavaScript knowledge along with HTML and CSS to create an interactive sidebar for 
-      mobile users. 
+      this week's video hamburger menu tutorial (https://www.youtube.com/watch?v=dAIVbLrAb_U). The 
+      video created it stricly used HTML and CSS. I applied my JavaScript knowledge along with HTML 
+      and CSS to create an interactive sidebar for mobile users. 
+      
+      This is where I learn how to add and remove css classes to an element. This is how I acheived the 
+      toggling hamburger side bar for mobile devices. 
+      https://www.w3schools.com/jsref/prop_element_classlist.asp
+
+      The Youtube video used some 'translate' and 'transform' css property but didn't go over it much. I 
+      read up on them some more and applied it to my toggling side bar. 
+      https://www.w3schools.com/cssref//css_pr_translate.php
+
 */
 
 /* Mobile layout (up to 600px) */

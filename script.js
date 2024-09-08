@@ -16,7 +16,7 @@ function showSidebar(){
 }
 
 window.onload = function(){
-    //Grab the buttons and when clicked, run their respective function call when clicked
+    // Grab the buttons and when clicked, run their respective function call when clicked
     document.getElementById('hamburger-menu-button').addEventListener('click', showSidebar);
     document.getElementById('hide-sidebar-button').addEventListener('click', hideSidebar);
 }
