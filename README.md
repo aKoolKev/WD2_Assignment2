@@ -34,7 +34,7 @@ Welcome to **Chess Openings Central**, a resource for learning and mastering pop
 
 1. Clone this repository: `https://github.com/aKoolKev/WD2_Assignment2.git`
 2. Open the `index.html` file on a modern browser.
-4. Ensure internet access to load Google Fonts.
+3. Ensure internet access to load Google Fonts.
 
 or 
 
