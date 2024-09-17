@@ -2,7 +2,7 @@
 
 Welcome to **Chess Openings Central**, a resource for learning and mastering popular chess openings. Explore guides for famous openings like the King's Pawn, Queen's Pawn, and other notable strategies used by chess players worldwide.
 
-# The second assignment for Web Design II further focuses on developing a responsive website for various-sized devices.
+The second assignment for Web Design II further focuses on developing a responsive website for various-sized devices.
 
 ## Features
 
